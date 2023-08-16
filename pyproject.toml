@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "auto-clicker"
+version = "0.1.0"
+description = "Auto clicker"
+authors = ["michqo <42279279+michqo@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pynput = "^1.7.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
