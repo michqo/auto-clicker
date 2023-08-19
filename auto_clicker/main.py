@@ -8,6 +8,7 @@ delay = 0.075
 range = 0.03
 left_key = KeyCode(char='c')
 right_key = KeyCode(char='2')
+stop_key = KeyCode(char='`')
 
 
 mouse = Controller()
@@ -56,9 +57,10 @@ def on_press(key):
             right_click_thread.stop_clicking()
         else:
             right_click_thread.start_clicking()
-    # elif key == exit_key:
-    #     click_thread.exit()
-    #     listener.stop()
+    elif key == stop_key:
+        left_click_thread.exit()
+        right_click_thread.exit()
+        listener.stop()
 
 
 with Listener(on_press=on_press) as listener:
